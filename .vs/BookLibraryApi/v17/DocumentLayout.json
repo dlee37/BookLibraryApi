@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\leed3\\Desktop\\git-projects\\BookLibraryApi\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{85FA1484-53EE-441F-A0F1-2B1623D94B78}|BookLibraryApi\\BookLibraryApi.csproj|c:\\users\\leed3\\desktop\\git-projects\\booklibraryapi\\booklibraryapi\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{85FA1484-53EE-441F-A0F1-2B1623D94B78}|BookLibraryApi\\BookLibraryApi.csproj|solutionrelative:booklibraryapi\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85FA1484-53EE-441F-A0F1-2B1623D94B78}|BookLibraryApi\\BookLibraryApi.csproj|c:\\users\\leed3\\desktop\\git-projects\\booklibraryapi\\booklibraryapi\\booklibraryapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{85FA1484-53EE-441F-A0F1-2B1623D94B78}|BookLibraryApi\\BookLibraryApi.csproj|solutionrelative:booklibraryapi\\booklibraryapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85FA1484-53EE-441F-A0F1-2B1623D94B78}|BookLibraryApi\\BookLibraryApi.csproj|c:\\users\\leed3\\desktop\\git-projects\\booklibraryapi\\booklibraryapi\\models\\books.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{85FA1484-53EE-441F-A0F1-2B1623D94B78}|BookLibraryApi\\BookLibraryApi.csproj|solutionrelative:booklibraryapi\\models\\books.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85FA1484-53EE-441F-A0F1-2B1623D94B78}|BookLibraryApi\\BookLibraryApi.csproj|c:\\users\\leed3\\desktop\\git-projects\\booklibraryapi\\booklibraryapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{85FA1484-53EE-441F-A0F1-2B1623D94B78}|BookLibraryApi\\BookLibraryApi.csproj|solutionrelative:booklibraryapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": ".gitignore",
+              "DocumentMoniker": "C:\\Users\\leed3\\Desktop\\git-projects\\BookLibraryApi\\BookLibraryApi\\.gitignore",
+              "RelativeDocumentMoniker": "BookLibraryApi\\.gitignore",
+              "ToolTip": "C:\\Users\\leed3\\Desktop\\git-projects\\BookLibraryApi\\BookLibraryApi\\.gitignore",
+              "RelativeToolTip": "BookLibraryApi\\.gitignore",
+              "ViewState": "AgIAACQAAAAAAAAAAAAkwDAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-04-28T21:43:09.866Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Books.cs",
+              "DocumentMoniker": "C:\\Users\\leed3\\Desktop\\git-projects\\BookLibraryApi\\BookLibraryApi\\Models\\Books.cs",
+              "RelativeDocumentMoniker": "BookLibraryApi\\Models\\Books.cs",
+              "ToolTip": "C:\\Users\\leed3\\Desktop\\git-projects\\BookLibraryApi\\BookLibraryApi\\Models\\Books.cs",
+              "RelativeToolTip": "BookLibraryApi\\Models\\Books.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T19:16:02.571Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BookLibraryApi",
+              "DocumentMoniker": "C:\\Users\\leed3\\Desktop\\git-projects\\BookLibraryApi\\BookLibraryApi\\BookLibraryApi.csproj",
+              "RelativeDocumentMoniker": "BookLibraryApi\\BookLibraryApi.csproj",
+              "ToolTip": "C:\\Users\\leed3\\Desktop\\git-projects\\BookLibraryApi\\BookLibraryApi\\BookLibraryApi.csproj",
+              "RelativeToolTip": "BookLibraryApi\\BookLibraryApi.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-04-28T19:15:14.256Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\leed3\\Desktop\\git-projects\\BookLibraryApi\\BookLibraryApi\\Program.cs",
+              "RelativeDocumentMoniker": "BookLibraryApi\\Program.cs",
+              "ToolTip": "C:\\Users\\leed3\\Desktop\\git-projects\\BookLibraryApi\\BookLibraryApi\\Program.cs",
+              "RelativeToolTip": "BookLibraryApi\\Program.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAAABIAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T18:59:20.349Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
