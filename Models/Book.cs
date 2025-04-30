@@ -1,6 +1,6 @@
 ﻿namespace BookLibraryApi.Models
 {
-    public class Books
+    public class Book
     {
         public int Id { get; set; } // unique identifier
         public string Title { get; set; } = string.Empty;
