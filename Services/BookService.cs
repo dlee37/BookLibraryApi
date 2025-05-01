@@ -45,5 +45,12 @@ namespace BookLibraryApi.Services
             _books.Remove(book);
             return true;
         }
+
+        public List<Book> SearchBooks(String query)
+        {
+            return _books.Where(b =>
+                b.Title.Contains(query, StringComparison.OrdinalIgnoreCase) ||
+                b.Author.Contains(query, StringComparison.OrdinalIgnoreCase)).ToList();
+        }
     }
 }
