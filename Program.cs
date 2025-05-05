@@ -1,5 +1,7 @@
+using BookLibraryApi.Data;
 using BookLibraryApi.Models;
 using BookLibraryApi.Services;
+using Microsoft.EntityFrameworkCore;
 using MiniValidation;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,7 +10,9 @@ var builder = WebApplication.CreateBuilder(args);
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddSingleton<BookService>();
+builder.Services.AddScoped<BookService>();
+builder.Services.AddDbContext<LibraryDbContext>(options =>
+    options.UseSqlite("Data Source=library.db"));
 
 var app = builder.Build();
 
@@ -23,9 +27,10 @@ app.UseHttpsRedirection();
 
 var bookApi = app.MapGroup("/books");
 
-bookApi.MapGet("/", (BookService service) =>
+bookApi.MapGet("/", async (LibraryDbContext db, int? page, int? pageSize, BookService service) =>
 {
-    return service.GetAllBooks();
+    var books = await service.GetAllBooks(page ?? 1, pageSize ?? 10);
+    return Results.Ok(books);
 });
 
 bookApi.MapGet("/{id}", (int id, BookService service) =>
@@ -34,7 +39,7 @@ bookApi.MapGet("/{id}", (int id, BookService service) =>
     return book is not null ? Results.Ok(book) : Results.NotFound();
 });
 
-bookApi.MapPost("/", (Book book, BookService service, HttpContext context) =>
+bookApi.MapPost("/", (Book book, HttpContext context, BookService service) =>
 {
     IDictionary<string, string[]> errors = new Dictionary<string, string[]>();
     if (!context.Request.HasJsonContentType() || !MiniValidator.TryValidate(book, out errors))
@@ -45,20 +50,20 @@ bookApi.MapPost("/", (Book book, BookService service, HttpContext context) =>
     return Results.Created($"/books/{added.Id}", added);
 });
 
-bookApi.MapPut("/{id}", (int id, Book book, BookService service, HttpContext context) =>
+bookApi.MapPut("/{id}", async (int id, Book book, BookService service, HttpContext context) =>
 {
     IDictionary<string, string[]> errors = new Dictionary<string, string[]>();
     if (!context.Request.HasJsonContentType() || !MiniValidator.TryValidate(book, out errors)) 
     {
         return Results.ValidationProblem(errors);
     }
-    var success = service.UpdateBook(id, book);
+    var success = await service.UpdateBook(id, book);
     return success ? Results.NoContent() : Results.NotFound();
 });
 
-bookApi.MapDelete("/{id}", (int id, BookService service) =>
+bookApi.MapDelete("/{id}", async (int id, BookService service) =>
 {
-    var success = service.DeleteBook(id);
+    var success = await service.DeleteBook(id);
     return success ? Results.NoContent() : Results.NotFound();
 });
 
@@ -67,5 +72,12 @@ bookApi.MapGet("/search", (string query, BookService service) =>
     var books = service.SearchBooks(query);
     return Results.Ok(books);
 });
+
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<LibraryDbContext>();
+    await DbInitializer.SeedDataAsync(db);
+}
+
 
 app.Run();

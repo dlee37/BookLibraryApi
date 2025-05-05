@@ -1,28 +1,46 @@
-﻿using BookLibraryApi.Models;
+﻿using System.Threading.Tasks;
+using BookLibraryApi.Data;
+using BookLibraryApi.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace BookLibraryApi.Services
 {
     public class BookService
     {
-        private readonly List<Book> _books = new();
-        private int _nextId = 1;
-        public List<Book> GetAllBooks() => _books;
+        private readonly LibraryDbContext _db;
 
-        public Book? GetById(int id)
+        public async Task<List<Book>> GetAllBooks(int page, int pageSize)
         {
-            return _books.FirstOrDefault(b => b.Id == id);
+            const int maxPageSize = 50;
+            int safePage = page < 1 ? 1 : page;
+            int safeSize = Math.Min(pageSize < 1 ? 10 : pageSize, maxPageSize);
+
+            return await _db.Books
+                .Skip((safePage - 1) * safeSize)
+                .Take(safeSize)
+                .ToListAsync();
         }
 
-        public Book AddBook(Book book)
+        public BookService(LibraryDbContext db)
         {
-            book.Id = _nextId++;
-            _books.Add(book);
+            _db = db;
+        }
+
+        public async Task<Book?> GetById(int id)
+        {
+            return await _db.Books.FindAsync(id);
+        }
+
+        public async Task<Book> AddBook(Book book)
+        {
+            _db.Books.Add(book);
+            await _db.SaveChangesAsync();
             return book;
         }
 
-        public bool UpdateBook(int id, Book updatedBook)
+        public async Task<bool> UpdateBook(int id, Book updatedBook)
         {
-            var existing = GetById(id);
+            var existing = await GetById(id);
             if (existing == null)
             {
                 return false;
@@ -32,25 +50,30 @@ namespace BookLibraryApi.Services
             existing.Genre = updatedBook.Genre;
             existing.YearPublished = updatedBook.YearPublished;
 
+            await _db.SaveChangesAsync();
             return true;
         }
 
-        public bool DeleteBook(int id)
+        public async Task<bool> DeleteBook(int id)
         {
-            var book = GetById(id);
+            var book = await GetById(id);
             if (book == null)
             {
                 return false;
             }
-            _books.Remove(book);
+            _db.Books.Remove(book);
+            await _db.SaveChangesAsync();
             return true;
         }
 
-        public List<Book> SearchBooks(String query)
+        public async Task<List<Book>> SearchBooks(String query)
         {
-            return _books.Where(b =>
-                b.Title.Contains(query, StringComparison.OrdinalIgnoreCase) ||
-                b.Author.Contains(query, StringComparison.OrdinalIgnoreCase)).ToList();
+            string lowercaseQuery = query.ToLower();
+            return await _db.Books
+                .Where(b => b.Title.ToLower().Contains(lowercaseQuery) ||
+                            b.Author.ToLower().Contains(lowercaseQuery) ||
+                            b.Genre.ToLower().Contains(lowercaseQuery))
+                .ToListAsync();
         }
     }
 }

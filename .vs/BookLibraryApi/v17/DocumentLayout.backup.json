@@ -3,16 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\leed3\\Desktop\\git-projects\\BookLibraryApi\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{5958DE25-B6C7-6461-D4CA-796F148E026A}|BookLibraryApi.csproj|c:\\users\\leed3\\desktop\\git-projects\\booklibraryapi\\data\\dbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5958DE25-B6C7-6461-D4CA-796F148E026A}|BookLibraryApi.csproj|solutionrelative:data\\dbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5958DE25-B6C7-6461-D4CA-796F148E026A}|BookLibraryApi.csproj|c:\\users\\leed3\\desktop\\git-projects\\booklibraryapi\\models\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5958DE25-B6C7-6461-D4CA-796F148E026A}|BookLibraryApi.csproj|solutionrelative:models\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{5958DE25-B6C7-6461-D4CA-796F148E026A}|BookLibraryApi.csproj|c:\\users\\leed3\\desktop\\git-projects\\booklibraryapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5958DE25-B6C7-6461-D4CA-796F148E026A}|BookLibraryApi.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5958DE25-B6C7-6461-D4CA-796F148E026A}|BookLibraryApi.csproj|c:\\users\\leed3\\desktop\\git-projects\\booklibraryapi\\data\\librarydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5958DE25-B6C7-6461-D4CA-796F148E026A}|BookLibraryApi.csproj|solutionrelative:data\\librarydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5958DE25-B6C7-6461-D4CA-796F148E026A}|BookLibraryApi.csproj|c:\\users\\leed3\\desktop\\git-projects\\booklibraryapi\\services\\bookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5958DE25-B6C7-6461-D4CA-796F148E026A}|BookLibraryApi.csproj|solutionrelative:services\\bookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5958DE25-B6C7-6461-D4CA-796F148E026A}|BookLibraryApi.csproj|c:\\users\\leed3\\desktop\\git-projects\\booklibraryapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{5958DE25-B6C7-6461-D4CA-796F148E026A}|BookLibraryApi.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{5958DE25-B6C7-6461-D4CA-796F148E026A}|BookLibraryApi.csproj|c:\\users\\leed3\\desktop\\git-projects\\booklibraryapi\\license||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{5958DE25-B6C7-6461-D4CA-796F148E026A}|BookLibraryApi.csproj|solutionrelative:license||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,42 +34,82 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "C:\\Users\\leed3\\Desktop\\git-projects\\BookLibraryApi\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
-              "ToolTip": "C:\\Users\\leed3\\Desktop\\git-projects\\BookLibraryApi\\Properties\\launchSettings.json",
-              "RelativeToolTip": "Properties\\launchSettings.json",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAACkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-05-01T17:22:25.694Z"
+              "DocumentIndex": 0,
+              "Title": "DbInitializer.cs",
+              "DocumentMoniker": "C:\\Users\\leed3\\Desktop\\git-projects\\BookLibraryApi\\Data\\DbInitializer.cs",
+              "RelativeDocumentMoniker": "Data\\DbInitializer.cs",
+              "ToolTip": "C:\\Users\\leed3\\Desktop\\git-projects\\BookLibraryApi\\Data\\DbInitializer.cs",
+              "RelativeToolTip": "Data\\DbInitializer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAACAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-04T17:49:02.766Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "LICENSE",
+              "DocumentMoniker": "C:\\Users\\leed3\\Desktop\\git-projects\\BookLibraryApi\\LICENSE",
+              "RelativeDocumentMoniker": "LICENSE",
+              "ToolTip": "C:\\Users\\leed3\\Desktop\\git-projects\\BookLibraryApi\\LICENSE",
+              "RelativeToolTip": "LICENSE",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-05-04T17:14:52.975Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LibraryDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\leed3\\Desktop\\git-projects\\BookLibraryApi\\Data\\LibraryDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\LibraryDbContext.cs",
+              "ToolTip": "C:\\Users\\leed3\\Desktop\\git-projects\\BookLibraryApi\\Data\\LibraryDbContext.cs",
+              "RelativeToolTip": "Data\\LibraryDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-04T16:55:32.772Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Book.cs",
+              "DocumentMoniker": "C:\\Users\\leed3\\Desktop\\git-projects\\BookLibraryApi\\Models\\Book.cs",
+              "RelativeDocumentMoniker": "Models\\Book.cs",
+              "ToolTip": "C:\\Users\\leed3\\Desktop\\git-projects\\BookLibraryApi\\Models\\Book.cs",
+              "RelativeToolTip": "Models\\Book.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T18:32:12.129Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "BookService.cs",
               "DocumentMoniker": "C:\\Users\\leed3\\Desktop\\git-projects\\BookLibraryApi\\Services\\BookService.cs",
               "RelativeDocumentMoniker": "Services\\BookService.cs",
               "ToolTip": "C:\\Users\\leed3\\Desktop\\git-projects\\BookLibraryApi\\Services\\BookService.cs",
               "RelativeToolTip": "Services\\BookService.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAAAADgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEwAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-01T17:14:52.717Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\leed3\\Desktop\\git-projects\\BookLibraryApi\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\leed3\\Desktop\\git-projects\\BookLibraryApi\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAADsAAAAAAAAAAAAAADEAAAApAAAAAAAAAA==",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAAAE8AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-30T16:37:02.797Z",
               "EditorCaption": ""

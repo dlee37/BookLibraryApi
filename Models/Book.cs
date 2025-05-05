@@ -18,6 +18,6 @@ namespace BookLibraryApi.Models
         public string Genre { get; set; } = string.Empty;
 
         [Range(0, 3000)]
-        public string YearPublished { get; set; }
+        public int YearPublished { get; set; }
     }
 }
