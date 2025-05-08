@@ -1,4 +1,5 @@
 using BookLibraryApi.Data;
+using BookLibraryApi.Middleware;
 using BookLibraryApi.Models;
 using BookLibraryApi.Services;
 using Microsoft.EntityFrameworkCore;
@@ -15,6 +16,7 @@ builder.Services.AddDbContext<LibraryDbContext>(options =>
     options.UseSqlite("Data Source=library.db"));
 
 var app = builder.Build();
+app.UseMiddleware<ErrorHandlingMiddleware>();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -71,6 +73,11 @@ bookApi.MapGet("/search", (string query, BookService service) =>
 {
     var books = service.SearchBooks(query);
     return Results.Ok(books);
+});
+
+bookApi.MapGet("/crash", () =>
+{
+    throw new Exception("Boom");
 });
 
 using (var scope = app.Services.CreateScope())
